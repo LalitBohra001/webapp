@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>sonar-demo</finalName>
+    <finalName>MyWebApp</finalName>
   </build>
 </project>
