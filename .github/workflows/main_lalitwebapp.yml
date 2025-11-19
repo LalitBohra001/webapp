@@ -50,4 +50,4 @@ jobs:
           app-name: 'lalitWebApp'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D0BB2562229C4E3C8B7A3D421F82A740 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_658875BB7E4A45909184624796C97B80 }}
