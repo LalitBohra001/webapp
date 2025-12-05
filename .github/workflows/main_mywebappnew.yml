@@ -22,16 +22,16 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '11'
-          distribution: 'microsoft'
+          distribution: 'adopt'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install -f pom.xml
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: MyWebApp
-          path: '${{ github.workspace }}/target/*.war'
+          path: '${{ github.workspace }}'
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,4 +51,5 @@ jobs:
           slot-name: 'Production'
           package: '*.war'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_73AAB870AB7E4E9FBFC2B47A8475453F }}
+
 
