@@ -47,10 +47,11 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'SpringBootApp'
+          app-name: 'MyWebAppNew'
           slot-name: 'Production'
           package: '*.war'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_73AAB870AB7E4E9FBFC2B47A8475453F }}
+
 
 
 
